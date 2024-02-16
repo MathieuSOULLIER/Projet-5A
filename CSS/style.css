@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1600e0, #009ee0);
+    filter: blur(0px);
+    transition: 0.2s;
+}
+.menu.active{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1600e0, #009ee0);
+    filter: blur(5px);
+    transition: 0.2s;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to left, #1600e0,65%,#ffffff);
+    border-bottom: solid 2px white;
+    box-shadow: 0px 1px 5px #191919c5;
+}
+header img{
+    width: auto;
+    height: 80%;
+}
+header h1{
+    color: #ffffff;
+    text-shadow: 0px 0px 4px #191919e5;
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    justify-content: end;
+}
+footer .PictOfMe{
+    width: auto;
+    height: 100%;
+    filter: drop-shadow(0px 0px 10px #ffffff);
+}
+footer .Arrow{
+    width: auto;
+    height: 50%;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+footer .MesInfo{
+    display: flex;
+    flex-direction:column;
+    align-items: end;
+}
+footer .MesInfo h2{
+    border-bottom: solid 2px #ffffff ;
+    padding-right: 2vw;
+    color: #ffffff;
+    text-shadow: 0px 0px 4px #191919e5;
+}
+footer .MesInfo h3{
+   color: #ffffff;
+   text-shadow: 0px 0px 4px #191919e5;
+}
+.Nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+.Nav .PartNav{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height:calc(100vw*0.15);
+    background-color: #ffffffcf;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 10px #191919e5;
+    border-bottom: solid 0.5vw #ffffff;
+    border-top: solid 0.5vw #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.Nav .PartNav img{
+    width: 50%;
+    height: auto;
+    filter: drop-shadow(0px 0px 2px #191919ac);
+}
+.Nav .PartNav h3{
+   color: #ffffff;
+   text-shadow: 0px 0px 4px #191919e5;
+   height: 0px;
+   overflow: hidden;
+   opacity: 0;
+   width: 80%;
+   text-align: center;
+   transition: 0.2s;
+}
+.Nav .PartNav:hover h3{
+    height: 20%;
+    opacity: 1;
+    transition: 0.2s;
+ }
+ .Nav .PartNav:hover{
+    box-shadow: 0px 0px 15px #191919f3;
+    transition: 0.2s;
+ }
+ .zoom{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+ }
+ .zoom.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+ }
+ .zoomPart{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 0%;
+    height: 0%;
+    background-color: #D2D7F9;
+    border-radius: 2vw;
+    box-shadow: 0px 0px 10px #191919e5;
+    border-bottom: solid 1vw #ffffff;
+    border-top: solid 1vw #ffffff;
+    transition: 1s;
+ }
+ .zoomPart.active{
+    width: 80%;
+    height: 90%;
+    transition: 1s;
+ }
+ .zoomPart .zoomPartHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 15%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    box-sizing: border-box;
+ }
+
+ .zoomPart .zoomPartHeader .infoHeader{
+    display: flex;
+    width: auto;
+    height: 90%;
+    align-items: end;
+ }
+ .zoomPart .zoomPartHeader .infoHeader h3{
+    color: #ffffff;
+   text-shadow: 0px 0px 3px #191919e5;
+   padding-bottom: 1vh;
+ }
+ .zoomPart .zoomPartHeader .infoHeader .logoZoomPart{
+    color: #ffffff;
+   filter: drop-shadow(0px 0px 2px #191919e5);
+   width: auto;
+   height: 100%;
+ }
+ .zoomPart .zoomPartHeader .BtnCroix{
+   filter: drop-shadow(0px 0px 1px #191919e5);
+   width: auto;
+   height: 50%;
+   cursor: pointer;
+   transition: 0.2s;
+ }
+ .zoomPart .zoomPartHeader .BtnCroix:hover{
+    filter: drop-shadow(0px 0px 2px #191919e5);
+    transition: 0.2s;
+  }
+  .zoomPart .zoomPartMain{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 95%;
+    height: 80%;
+    padding: 1vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px #191919e5;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+  }
+  .zoomPart .zoomPartMain #CompanyMainHeader{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 10vh;
+  }
+  .zoomPart .zoomPartMain #CompanyMainHeader img{
+    width: auto;
+    height: 90%;
+  } 
+  .zoomPart .zoomPartMain #CompanyMainHeader #GeName{
+    width: auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 10px;
+    color: #3C72BC;
+    text-shadow: 0px 0px 1px #1919194e;
+  }
+  .zoomPart .zoomPartMain p{
+    margin-top: 15px;
+  }
+
+  .zoomPart .zoomPartMain #TeamMainHeader{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 40vh;
+  }
+  .zoomPart .zoomPartMain #TeamMainHeader img{
+    width: auto;
+    height: 90%;
+  }
+  .zoomPart .zoomPartMain #TeamMainHeader div{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: start;
+    width: auto;
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 10vw;
+  }
+  .zoomPart .zoomPartMain h4{
+    padding-top: 25px;
+    text-decoration: underline;
+  }
+  .zoomPart .zoomPartMain #ContextMainHeader{
+    width: 100%;
+    height: auto;
+  }
